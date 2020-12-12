@@ -9,6 +9,7 @@
       href="https://fonts.googleapis.com/css2?family=Langar&display=swap"
       rel="stylesheet"
     />
+    <link href="https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
@@ -16,7 +17,8 @@
       <div class="container">
         <div class="first-block">
           <div class="hello">
-            <img src="/img/hello.png" alt="">
+            <div class="code">
+              <img class="man" src="/img/hello.png" alt="" /></div>
           </div>
           <div class="text">
             <p>
@@ -31,12 +33,15 @@
         <div class="second-block">
           <h1 class="welcome">Welcome</h1>
           <h2 class="userLog">User Login</h2>
-          <input type="email" class="email" />
-          <input type="password" class="pass" />
-          <input type="radio" />
+          <input id="email1" type="email" class="email" placeholder="Email"/>
+          <input id="pass1" type="password" class="pass" placeholder="Password"/>
+          <div class="remember">
+            <input type="checkbox"/>
+            <h3>Remember me</h3>
+          </div>
           <a href="#" class="forgot">Forgot Password?</a>
 
-          <button class="login">LOG IN</button>
+          <button class="login" type="submit">LOG IN</button>
           <a href="" class="create">Create account</a>
         </div>
         <!-- /.second-block -->

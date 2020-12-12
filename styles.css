@@ -18,15 +18,15 @@
     width: 1000px;
     height: 500px;
     background-color: whitesmoke;
-    display: flex;  
+    display: flex;
 }
 
 .first-block {
-    display: flex;  
+    display: flex;
     justify-content: center;
-    background-color: #3B0470	;
+    background-color: #412C83;
     height: 100%;
-    width: 900px;
+    width: 750px;
     position: relative;
 }
 
@@ -37,7 +37,7 @@
 
 .hello img {
     height: 370px;
-    
+
 }
 
 .text {
@@ -51,5 +51,114 @@
 }
 
 .second-block {
-    background-color: #9cacbf;
+    background-color: #876ED7;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 500px;
+}
+
+.welcome {
+    margin-top: 7px;
+    font-size: 50px;
+    font-family: 'Fjalla One', sans-serif;
+    padding: 15px 0;
+    color: whitesmoke;
+}
+
+.userLog {
+    font-family: 'Fjalla One', sans-serif;
+    font-size: 35px;
+    padding: 20px 0 10px 0;
+}
+
+#email1,
+#pass1 {
+    width: 300px;
+    height: 30px;
+    font-size: 18px;
+    padding-left: 10px;
+    color: #412C83;
+    margin: 5px 0;
+    border-radius: 10px;
+    border: none;
+    font-family: 'Langar', cursive;
+}
+
+input:active,
+input:focus {
+    outline: none !important;
+    box-shadow: 0 0 0 60px rgba(0, 0, 0, 0) inset, 5px 5px 7px #2D0571;
+}
+
+/* input:hover {
+    box-shadow: 0 0 0 60px rgba(0, 0, 0, 0) inset, 5px 5px 7px #2D0571;
+} */
+
+input::-moz-focus-inner {
+    border: 0 !important;
+}
+
+.remember {
+    margin-top: 15px;
+    display: flex;
+    align-items: center;
+    font-family: 'Langar', cursive;
+}
+
+.remember input {
+    margin-right: 7px;
+    margin-bottom: 2px;
+    height: 15px;
+    width: 15px;
+    box-shadow: none;
+}
+
+.second-block a {
+    font-size: 20px;
+    color: whitesmoke;
+}
+
+.forgot {
+    margin-top: 15px;
+    margin-bottom: 40px;
+    font-family: 'Langar', cursive;
+}
+
+
+.login {
+    width: 160px;
+    height: 40px;
+    border-radius: 50px;
+    font-family: 'Fjalla One', sans-serif;
+    font-size: 25px;
+    position: relative;
+    display: inline-block;
+    position: relative;
+    text-shadow: 0 -1px 1px #777;
+    color: #fff;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    background: linear-gradient(#580EAD, #580EAD 48%, #4A11AE 52%, #4A11AE);
+    cursor: pointer;
+}
+
+.login:hover {
+    box-shadow: 0 0 0 60px rgba(0, 0, 0, 0) inset, 5px 5px 7px #2D0571;
+}
+
+.login:active {
+    top: .1em;
+    left: .1em;
+    box-shadow: 0 0 0 60px rgba(0, 0, 0, .05) inset;
+}
+
+.create {
+    margin-top: 25px;
+    font-family: 'Langar', cursive;
+}
+
+.create:hover, .forgot:hover {
+    color: black;
 }

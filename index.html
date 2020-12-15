@@ -30,22 +30,21 @@
           </div>
         </div>
         <!-- first block -->
-        <div class="second-block">
+        <form class="second-block">
           <h1 class="welcome">Welcome</h1>
           <h2 class="userLog">User Login</h2>
-            <input id="email1" type="email" class="email" required placeholder="E-mail"/>
-            <input id="pass1" type="password" required class="pass" placeholder="Password" title="Пароль должен содержать только латинские буквы, цифры и быть от 6 до 12 символов."/>
+          <input id="email1" type="email" class="email" required placeholder="E-mail" title="Это поле должно содержать E-Mail в формате example@site.com"/>
+          <input id="pass1" type="password" required class="pass" pattern="^\S[a-zA-Z0-9]{5,12}$" placeholder="Password" title="Пароль должен содержать только латинские буквы, цифры и быть от 6 до 12 символов."/>
           
           <div class="remember">
             <input type="checkbox"/>
             <h3>Remember me</h3>
           </div>
           <a href="#" class="forgot">Forgot Password?</a>
-
           <button class="login" type="submit">LOG IN</button>
           <a href="" class="create">Create account</a>
-        </div>
-        <!-- /.second-block -->
+        </form>
+        <!-- /.form -->
       </div>
     </div>
 

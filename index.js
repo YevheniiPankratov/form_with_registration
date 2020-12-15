@@ -1,40 +1,35 @@
 let email = document.querySelector('#email1'),
     pass = document.querySelector('#pass1'),
-    login = document.querySelector('.login');
+    login = document.querySelector('.login'),
+    remember = document.querySelector('.remember').firstElementChild;
 
-login.addEventListener('click', form)
+
+login.addEventListener('click', (e) => {
+    e.preventDefault();
+    pass.value = '';
+    email.value = '';
+    remember.checked = false
+    form();
+})
 
 function checkEmail(value) {
     let expEmail = /^[^\s\-]+[a-zA-Z\-\][\w\d]+\@[\w]+\.[a-zA-Z]+$/;
 
-
     if (expEmail.test(value)) {
-        console.log('login');
+        return true;
     }
 }
 
 function checkPass(value) {
-    let expPass = /^\S[a-zA-Z0-9]{6,12}$/;
+    let expPass = /^\S[a-zA-Z0-9]{5,12}$/;
 
     if (expPass.test(value)) {
-        console.log(13);
+        return true;
     };
 }
 
 function form() {
-    checkEmail(email.value);
-    checkPass(pass.value);
-}
-
-form()
-
-const regex = /^[^\s\-]+[a-zA-Z\-\][\w\d]+\@[\w]+\.[a-zA-Z]+$/;
-const str = ' sergey.makarenko@nure.ua';
-let m;
-
-if ((m = regex.exec(str)) !== null) {
-    // The result can be accessed through the m-variable.
-    m.forEach((match, groupIndex) => {
-        console.log(`Found match, group ${groupIndex}: ${match}`);
-    });
+    if (checkPass(pass.value) && checkEmail(email.value)) {
+        console.log('good');
+    }
 }

@@ -72,33 +72,6 @@
     padding: 20px 0 10px 0;
 }
 
-#email1,
-#pass1 {
-    width: 300px;
-    height: 30px;
-    font-size: 18px;
-    padding-left: 10px;
-    color: #412C83;
-    margin: 5px 0;
-    border-radius: 10px;
-    border: none;
-    font-family: 'Langar', cursive;
-}
-
-input:active,
-input:focus {
-    outline: none !important;
-    box-shadow: 0 0 0 60px rgba(0, 0, 0, 0) inset, 5px 5px 7px #2D0571;
-}
-
-/* input:hover {
-    box-shadow: 0 0 0 60px rgba(0, 0, 0, 0) inset, 5px 5px 7px #2D0571;
-} */
-
-input::-moz-focus-inner {
-    border: 0 !important;
-}
-
 .remember {
     margin-top: 15px;
     display: flex;
@@ -112,6 +85,7 @@ input::-moz-focus-inner {
     height: 15px;
     width: 15px;
     box-shadow: none;
+    cursor: pointer;
 }
 
 .second-block a {
@@ -159,6 +133,42 @@ input::-moz-focus-inner {
     font-family: 'Langar', cursive;
 }
 
-.create:hover, .forgot:hover {
+.create:hover,
+.forgot:hover {
     color: black;
+}
+
+#email1,
+#pass1 {
+    width: 300px;
+    height: 30px;
+    font-size: 18px;
+    padding-left: 10px;
+    color: #412C83;
+    margin: 5px 0;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    font-family: 'Langar', cursive;
+}
+
+input:active,
+input:focus {
+    outline: none !important;
+    box-shadow: 0 0 0 60px rgba(0, 0, 0, 0) inset, 5px 5px 7px #2D0571;
+}
+
+#email1:valid:not(:placeholder-shown), #pass1:valid:not(:placeholder-shown) {
+	border-color: green;
+}
+
+#email1:invalid:not(:placeholder-shown), #pass1:invalid:not(:placeholder-shown) {
+	border-color: red;
+}
+
+input:hover {
+    box-shadow: 0 0 0 60px rgba(0, 0, 0, 0) inset, 5px 5px 7px #2D0571;
+}
+
+input::-moz-focus-inner {
+    border: 0 !important;
 }

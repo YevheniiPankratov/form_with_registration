@@ -1,14 +1,15 @@
 let email = document.querySelector('#email1'),
     pass = document.querySelector('#pass1'),
     login = document.querySelector('.login'),
-    remember = document.querySelector('.remember').firstElementChild;
+    remember = document.querySelector('.remember').firstElementChild,
+    modal = document.querySelector('.modal'),
+    span = document.querySelector('.close'),
+    resModal = document.querySelector('.resModal'),
+    modalBody = document.querySelector('.modal-body');
 
 
 login.addEventListener('click', (e) => {
     e.preventDefault();
-    pass.value = '';
-    email.value = '';
-    remember.checked = false
     form();
 })
 
@@ -30,6 +31,29 @@ function checkPass(value) {
 
 function form() {
     if (checkPass(pass.value) && checkEmail(email.value)) {
-        console.log('good');
+        modal.style.display = "block";
+        document.body.style.overflow = "hidden";
+        resModal.textContent = 'Login completed successfully';
+        modalBody.textContent = 'Now you can use the site)'
+        pass.value = '';
+        email.value = '';
+        remember.checked = false
+    } else {
+        modal.style.display = "block";
+        document.body.style.overflow = "hidden";
+        resModal.textContent = 'Login failed';
+        modalBody.textContent = 'You entered incorrect password or login details';
+    }
+}
+
+span.onclick = function () {
+    modal.style.display = "none";
+    document.body.style.overflow = ''
+}
+
+window.onclick = function (event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+        document.body.style.overflow = ''
     }
 }

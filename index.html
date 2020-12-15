@@ -9,7 +9,10 @@
       href="https://fonts.googleapis.com/css2?family=Langar&display=swap"
       rel="stylesheet"
     />
-    <link href="https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap" rel="stylesheet">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
@@ -18,7 +21,8 @@
         <div class="first-block">
           <div class="hello">
             <div class="code">
-              <img class="man" src="/img/hello.png" alt="" /></div>
+              <img class="man" src="/img/hello.png" alt="" />
+            </div>
           </div>
           <div class="text">
             <p>
@@ -33,11 +37,26 @@
         <form class="second-block">
           <h1 class="welcome">Welcome</h1>
           <h2 class="userLog">User Login</h2>
-          <input id="email1" type="email" class="email" required placeholder="E-mail" title="Это поле должно содержать E-Mail в формате example@site.com"/>
-          <input id="pass1" type="password" required class="pass" pattern="^\S[a-zA-Z0-9]{5,12}$" placeholder="Password" title="Пароль должен содержать только латинские буквы, цифры и быть от 6 до 12 символов."/>
-          
+          <input
+            id="email1"
+            type="email"
+            class="email"
+            required
+            placeholder="E-mail"
+            title="Это поле должно содержать E-Mail в формате example@site.com"
+          />
+          <input
+            id="pass1"
+            type="password"
+            required
+            class="pass"
+            pattern="^\S[a-zA-Z0-9]{5,12}$"
+            placeholder="Password"
+            title="Пароль должен содержать только латинские буквы, цифры и быть от 6 до 12 символов."
+          />
+
           <div class="remember">
-            <input type="checkbox"/>
+            <input type="checkbox" />
             <h3>Remember me</h3>
           </div>
           <a href="#" class="forgot">Forgot Password?</a>
@@ -45,6 +64,19 @@
           <a href="" class="create">Create account</a>
         </form>
         <!-- /.form -->
+      </div>
+    </div>
+
+
+    <div id="myModal" class="modal">
+      <div class="modal-content">
+        <div class="modal-header">
+          <span class="close">&times;</span>
+          <h2 class="resModal">res</h2>
+        </div>
+        <div class="modal-body">
+          <p>Какой-то текст в теле модального окна</p>
+        </div>
       </div>
     </div>
 
